@@ -7,7 +7,9 @@ import newBeerImage from "../assets/new-beer.png"
 export default function HomePage() {
     return (
         <div>
+            <div class="thumbnail">
             <Link to="/beers"><img src={BeersImage} alt=""/>Beers</Link>
+            </div>
             <Link to="/random-beer"><img src={randomBeersImage} alt=""/>Random beer</Link>
             <Link to="/new-beer"><img src={newBeerImage} alt=""/>new beer</Link>
 

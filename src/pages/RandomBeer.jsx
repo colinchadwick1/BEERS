@@ -30,11 +30,6 @@ export default function RandomBeer() {
             <p>{beers.attenuation_level}</p>
             <p>{beers.description}</p>
             <p>{beers.contributed_by}</p>
-
-
-
-
-
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import { useParams } from 'react-router';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Header from '../components/Header';
 
 import React from 'react';
 
@@ -20,19 +21,20 @@ export default function BeerDetails() {
   }, []);
 
   return (
+    <>
+    <Header/>
+<div className="container">
+    <img className="detail-img" src={beers.image_url} alt=""/>
+    
     <div>
-      <h2>{beers.name}</h2>
-      <p><img src={beers.image_url} alt=""/></p>
-      <p>{beers.tagline}</p>
-      <p>{beers.first_brewed}</p>
-      <p>{beers.attenuation_level}</p>
-      <p>{beers.description}</p>
-      <p>{beers.contributed_by}</p>
-
-
-
-
-      
+    <h3 className="card-title">{beers.name}</h3>
+    <p className="card-text">{beers.tagline}</p>
+    <p className="card-text"><strong>First brewed:</strong> {beers.first_brewed}</p>
+    <p className="card-text"><strong>Attentuation level: </strong>  {beers.attenuation_level}</p>
+    <p className="card-text"><strong> Description:</strong>  {beers.description}</p>
+    <p><strong>Contributed by: </strong> {beers.contributed_by}</p>
     </div>
+</div>
+</>
   );
 }

@@ -34,6 +34,7 @@ export default function NewBeer() {
     return(
         <div className="NewBeerPage">
         <Header/>
+        <div className="new-beer">
         <h3>Add a beer</h3>
         
         <form onSubmit={handleSubmit}>
@@ -95,6 +96,7 @@ export default function NewBeer() {
           <button type="submit">Create Beer</button>
           
         </form>
+        </div>
       </div>
         )
 }

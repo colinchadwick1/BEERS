@@ -46,18 +46,20 @@ const { id: beerId } = useParams();
       <Header />
       <Search filterFood={handleFilterBeer}/>
 
-      <p>BEERS</p>
       <div>
       <h3>List of Beers</h3>
 
       {filteredBeers.map((beer) => (
-        <div key={beer._id} className="card">
-          <img src={beer.image_url} alt="beer" />
-          <h3>{beer.name}</h3>
-          <p> {beer.tagline}</p>
+        <div key={beer._id} className="card" >
+          <img className="card-img-top"src={beer.image_url} alt="beer" />
+          <div className="card-body">
+          <h3 className="card-title">{beer.name}</h3>
+          <p className="card-text"> {beer.tagline}</p>
           <p>{beer.contributed_by}</p>
-          <Link to={`/beers/${beer._id}`}>Find out more:</Link>
+          <Link to={`/beers/${beer._id}`} className="btn btn-primary">Find out more:</Link>
+          </div>
         </div>
+        
       ))}
     </div>
     </div>

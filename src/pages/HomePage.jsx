@@ -6,13 +6,18 @@ import newBeerImage from "../assets/new-beer.png"
 
 export default function HomePage() {
     return (
-        <div>
-            <div class="thumbnail">
-            <Link to="/beers"><img src={BeersImage} alt=""/>Beers</Link>
-            </div>
-            <Link to="/random-beer"><img src={randomBeersImage} alt=""/>Random beer</Link>
-            <Link to="/new-beer"><img src={newBeerImage} alt=""/>new beer</Link>
+        <>
+            <h1>BEERS</h1>
+        <div className="home">
+            <Link to="/beers">
+                <div className="card" >
+                <img className="thumbnail"src={BeersImage} alt="all-beers"/><strong>All beers</strong></div></Link>
+            <Link to="/random-beer"><div className="card"><img className="thumbnail" src={randomBeersImage} alt=""/><strong>Random beer</strong></div></Link>
+            <Link to="/new-beer"><div className="card"><img className="thumbnail" src={newBeerImage} alt=""/><strong>Add a beer</strong></div></Link>
 
         </div>
+        
+        </>
+
     )
 }

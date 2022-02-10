@@ -14,7 +14,6 @@ export default function BeerDetails() {
     axios
       .get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
       .then((response) => {
-        console.log('response.data', response.data);
         setBeers(response.data);
       })
       .catch(console.log);

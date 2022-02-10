@@ -5,7 +5,6 @@ export default function Search(props){
     const [string, setString] = useState("")
 
     function handleSearch(event){
-        console.log(event.target.value)
         setString(event.target.value);
         props.filterFood(event.target.value)
 
